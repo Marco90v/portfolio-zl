@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function Gallery(){
     return(
-        <div className="h-screen overflow-auto py-8 lg:col-span-5 flex flex-wrap gap-10 justify-center items-center">
+        <section className="baseContainerSection extraContainerSection bg-gradient-radial from-white to-pink-200 from-80%">
             {
                 art.map((item,idx)=>{
                     return (
@@ -20,7 +20,7 @@ function Gallery(){
                     )
                 })
             }
-        </div>
+        </section>
     )
 }
 export default Gallery;

@@ -40,7 +40,7 @@ function Sidebar(){
                 src={avatar}
                 alt="Zoimar Lezama"
             />
-            <h1 className="text-center text-2xl font-black mb-10 text-pink-600">Tonsang</h1>
+            <h1 className="text-center text-4xl font-black mb-10 text-pink-600 titleShadow">Tonsang</h1>
             <ul className="flex flex-col justify-center gap-10 w-full text-center text-lg mb-10">
                 {
                     root.map((item:root)=>{
