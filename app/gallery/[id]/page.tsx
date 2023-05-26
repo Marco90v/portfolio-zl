@@ -15,10 +15,10 @@ function page({params}:any){
                 
             >
                 <Image
-                    className="shadow-2xl shadow-pink-400"
+                    className="shadow-2xl shadow-pink-400 bg-pink-100"
                     src={img.link}
-                    width={800}
-                    height={800}
+                    width={700}
+                    height={700}
                     alt="art"
                 />
             </div>
