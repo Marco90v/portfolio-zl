@@ -29,7 +29,7 @@ function Sidebar(){
     const pathname = usePathname();
     const [show, setShow] = useState(false);
     const nav = show ? "left-0" : "-left-60";
-    const img = show ? "rotate-180" : "rotate-0"
+    const img = show ? "rotate-180" : "rotate-0";
 
     const handlerClick = () => setShow(!show);
 
@@ -44,7 +44,7 @@ function Sidebar(){
             <ul className="flex flex-col justify-center gap-10 w-full text-center text-lg mb-10">
                 {
                     root.map((item:root)=>{
-                        const isActive = pathname.startsWith(item.href) ? 'font-black text-pink-600 backActive' : '';
+                        const isActive = pathname === item.href ? 'font-black text-pink-600 backActive' : '';
                         return <Link key={item.name} className={`relative back ${isActive}`} href={item.href}>{item.name}</Link>
                     })
                 }
