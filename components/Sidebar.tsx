@@ -34,7 +34,7 @@ function Sidebar(){
     const handlerClick = () => setShow(!show);
 
     return(
-        <nav className={`fixed z-10 h-screen ${nav} flex justify-center flex-col gap-5 bg-black text-pink-400 transition-all duration-700 w-60 lg:static lg:w-auto`}>
+        <nav className={`fixed z-10 h-screen ${nav} flex justify-center flex-col gap-5 bg-black text-pink-400 transition-[left] duration-700 w-60 lg:static lg:w-auto`}>
             <Image
                 className="rounded-full w-52 mx-auto"
                 src={avatar}
