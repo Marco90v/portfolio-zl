@@ -2,26 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
 :root {
-  --foreground-rgb: 0, 0, 0;
+  /* --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255; */
+  font-family: 'Bad Script', cursive;
+  font-size: 16px;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+} */
+
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-spacing: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
+
+.back::before{
+  content: "";
+  /* width: 0rem;
+  height: 0rem; */
+  width: 0rem;
+  height: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 6rem;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  background: rgb(255 255 255 / 10%);
+  transition: all ease-in-out 0.25s;
+}
+.backActive::before{
+  /* background: rgb(255 255 255 / 10%); */
+  width: 8rem;
+  /* height: 3rem; */
+  opacity: 1;
+
+}
+.back:hover::before{
+  /* background: rgb(255 255 255 / 10%); */
+  width: 8rem;
+  /* height: 3rem; */
+  opacity: 1;
+
+}
+
