@@ -16,8 +16,8 @@ const root:root[] = [
         href: "/gallery",
     },
     {
-        name: "Follow Me",
-        href: "/followme",
+        name: "About me",
+        href: "/aboutme",
     },
     {
         name: "Contact",
