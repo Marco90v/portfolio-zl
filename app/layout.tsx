@@ -1,10 +1,10 @@
 'use client'
 import Sidebar from "@/components/Sidebar";
 import "../styles/globals.css";
+import favicon from "../assets/min-zoimar-lezama.jpg"
 
 import { Bad_Script } from "next/font/google"
 import { AnimatePresence } from "framer-motion";
-import { AppProps } from "next/app";
 
 // export const metadata = {
 //   title: 'Next.js',
@@ -24,6 +24,7 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
       <title>Tonsang - Zoimar Lemaza | Portfolio</title>
       <meta name="description" content="Portfolio of illustrations" />
       <meta name="author" content="Marco Velasquez Figarella" />
+      <link rel="icon" type="image/x-icon" href="/min-zoimar-lezama.png" />
       <body className={`bg-black ${font.className}`}>
         <main className="lg:grid gap-0 grid-cols-6 grid-rows-1">
           <Sidebar />
