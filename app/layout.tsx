@@ -19,21 +19,21 @@ const font = Bad_Script(
 )
 
 export default function RootLayout({ children }: {children: React.ReactNode}) {
-  // const url = router.route
   return (
     <html lang="en">
+      <title>Tonsang - Zoimar Lemaza | Portfolio</title>
+      <meta name="description" content="Portfolio of illustrations" />
+      <meta name="author" content="Marco Velasquez Figarella" />
       <body className={`bg-black ${font.className}`}>
         <main className="lg:grid gap-0 grid-cols-6 grid-rows-1">
           <Sidebar />
           <AnimatePresence
-                mode="wait"
-                initial={false}
-                onExitComplete={() => window.scrollTo(0, 0)}
+              mode="wait"
+              initial={false}
+              onExitComplete={() => window.scrollTo(0, 0)}
             >
-                {/* <Component {...pageProps} canonical={url} key={url} /> */}
-                {children}
+              {children}
           </AnimatePresence>
-          {/* {children} */}
         </main>
         </body>
     </html>
