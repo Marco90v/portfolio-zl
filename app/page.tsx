@@ -6,6 +6,9 @@ import { usePathname } from "next/navigation";
 
 function Page(){
     const pathname = usePathname();
+    const myLoader = ({ src, width, quality }:any) => {
+        return `http://localhost:3000/${src}?w=${width}&q=${ quality || 50 }`;
+    };
     return(
         <motion.section
             initial={{ opacity: 0 }}
@@ -17,7 +20,9 @@ function Page(){
             <Image
                 className="w-full h-full object-cover"
                 src={cover}
+                loader={myLoader}
                 alt="cover"
+                quality={75}
             />
             <div className="w-full h-full absolute left-0 top-0 bg-gradient-to-b from-black text-pink-600 flex flex-col justify-center items-center gap-y-40">
                 <h2 className="text-8xl lg:text-9xl font-black text-center">Zoimar lezama</h2>

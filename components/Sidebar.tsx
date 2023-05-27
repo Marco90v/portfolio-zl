@@ -36,8 +36,11 @@ function Sidebar(){
     return(
         <nav className={`fixed z-10 h-screen ${nav} flex justify-center flex-col gap-5 bg-black text-pink-400 transition-[left] duration-700 w-60 lg:static lg:w-auto`}>
             <Image
-                className="rounded-full w-52 mx-auto"
+                className="rounded-full w-52 h-52 mx-auto"
                 src={avatar}
+                width={208}
+                height={208}
+                quality="50"
                 alt="Zoimar Lezama"
             />
             <h1 className="text-center text-4xl font-black mb-10 text-pink-600 titleShadow">Tonsang</h1>
