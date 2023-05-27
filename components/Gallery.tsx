@@ -1,9 +1,7 @@
-import { art } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
 import { URLBase, JSON, useFetch } from "@/hooks/useFetch";
 import LoadingData from "./LoadingData";
-
 
 function Gallery(){
     const [ data ] = useFetch(URLBase+JSON);
@@ -19,7 +17,7 @@ function Gallery(){
                                 src={URLBase+item.link}
                                 width={320}
                                 height={320}
-                                quality="50"
+                                quality="20"
                                 alt="art"
                             />
                         </Link>

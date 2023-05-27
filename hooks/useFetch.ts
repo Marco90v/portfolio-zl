@@ -8,7 +8,7 @@ function useFetch( URL:string ){
         (
             async function(){
                 try {
-                    const res = await fetch(URL, { next: { revalidate: 120 } });
+                    const res = await fetch(URL, { next: { revalidate: 300 } });
                     const json = await res.json();
                     setData(json);
                 } catch (error) {

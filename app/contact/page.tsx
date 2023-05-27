@@ -90,6 +90,8 @@ function Page(){
                         alt="iconSend"
                         width={24}
                         height={24}
+                        quality="25"
+                        priority={true}
                     />
                 </button>
             </form>

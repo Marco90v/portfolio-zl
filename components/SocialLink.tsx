@@ -9,6 +9,8 @@ function SocialLink({src, alt, href}:any){
                 alt={alt}
                 width={34}
                 height={34}
+                quality="25"
+                priority={true}
             />
             <p>{alt}</p>
         </Link>

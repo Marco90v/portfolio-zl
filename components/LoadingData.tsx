@@ -11,6 +11,8 @@ function LoadingData() {
                 width={24}
                 height={24}
                 alt="spinner"
+                quality="25"
+                priority={true}
             />
         </div>
     )

@@ -6,8 +6,6 @@ import { useState } from "react";
 import avatar from "../assets/min-zoimar-lezama.jpg";
 import arrow from "../assets/chevrons-right-regular-24.png";
 
-// import { URLBase, JSON, useFetch } from "@/hooks/useFetch";
-
 const root:root[] = [
     {
         name: "Home",
@@ -30,9 +28,6 @@ const root:root[] = [
 function Sidebar(){
     const pathname = usePathname();
 
-    // const [ data ] = useFetch(URLBase+JSON);
-    // console.log(data);
-
     const [show, setShow] = useState(false);
     const nav = show ? "left-0" : "-left-60";
     const img = show ? "rotate-180" : "rotate-0";
@@ -47,7 +42,8 @@ function Sidebar(){
                     src={avatar}
                     width={208}
                     height={208}
-                    quality="50"
+                    quality="20"
+                    priority={true}
                     alt="Zoimar Lezama"
                 />
             
