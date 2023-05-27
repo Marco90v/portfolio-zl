@@ -1,10 +1,12 @@
-'use client'
+"use client"
+import { motion } from "framer-motion";
 import Image from "next/image";
 import iconSend from "../../assets/mail-send-regular-24.png";
 import iconSuccess from "../../assets/check-circle-solid-24.png";
 import iconError from "../../assets/error-circle-solid-24.png";
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
+import { usePathname } from "next/navigation";
 
 const SERVICE_ID = "service_gvdn1yc";
 const TEMPLATE_ID = "template_ggqg58v";
@@ -23,6 +25,8 @@ const initialAlert = {
 }
 
 function Page(){
+    const pathname = usePathname();
+
     const [formContact, setFormContact] = useState(initialformContact);
     const [disabled, setDisabled] = useState(false);
     const [alert, setAlert] = useState(initialAlert);
@@ -58,7 +62,13 @@ function Page(){
         });
     }
     return(
-        <section className="baseContainerSection extraContainerSection bg-gradient-to-br from-black via-pink-950 to-pink-900 from-20% via-80%">
+        <motion.section
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            key={pathname}
+            className="baseContainerSection extraContainerSection bg-gradient-to-br from-black via-pink-950 to-pink-900 from-20% via-80%">
             <h2 className="lg:absolute top-20 text-white text-4xl font-black" >Contact me</h2>
             <form onSubmit={handlerSubmit} className="p-2 w-[40rem] y-[25rem] grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
                 <input disabled={disabled} onChange={handlerInput} value={formContact.fullName} required name="fullName" id="fullName" type="text" placeholder="Full Name" className="baseInputsContact" />
@@ -82,7 +92,7 @@ function Page(){
                     />
                 </button>
             </form>
-        </section>
+        </motion.section>
     )
 }
 export default Page;

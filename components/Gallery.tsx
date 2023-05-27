@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function Gallery(){
     return(
-        <section className="baseContainerSection extraContainerSection bg-gradient-radial from-white to-pink-200 from-80%">
+        <div className="baseContainerSection extraContainerSection bg-gradient-radial from-white to-pink-200 from-80%">
             {
                 art.map((item,idx)=>{
                     return (
@@ -20,7 +20,7 @@ function Gallery(){
                     )
                 })
             }
-        </section>
+        </div>
     )
 }
 export default Gallery;
