@@ -6,6 +6,8 @@ import { useState } from "react";
 import avatar from "../assets/min-zoimar-lezama.jpg";
 import arrow from "../assets/chevrons-right-regular-24.png";
 
+// import { URLBase, JSON, useFetch } from "@/hooks/useFetch";
+
 const root:root[] = [
     {
         name: "Home",
@@ -27,6 +29,10 @@ const root:root[] = [
 
 function Sidebar(){
     const pathname = usePathname();
+
+    // const [ data ] = useFetch(URLBase+JSON);
+    // console.log(data);
+
     const [show, setShow] = useState(false);
     const nav = show ? "left-0" : "-left-60";
     const img = show ? "rotate-180" : "rotate-0";
@@ -35,14 +41,16 @@ function Sidebar(){
 
     return(
         <nav className={`fixed z-10 h-screen ${nav} flex justify-center flex-col gap-5 bg-black text-pink-400 transition-[left] duration-700 w-60 lg:static lg:w-auto`}>
-            <Image
-                className="rounded-full w-52 h-52 mx-auto"
-                src={avatar}
-                width={208}
-                height={208}
-                quality="50"
-                alt="Zoimar Lezama"
-            />
+            
+                <Image
+                    className="rounded-full w-52 h-52 mx-auto"
+                    src={avatar}
+                    width={208}
+                    height={208}
+                    quality="50"
+                    alt="Zoimar Lezama"
+                />
+            
             <h1 className="text-center text-4xl font-black mb-10 text-pink-600 titleShadow">Tonsang</h1>
             <ul className="flex flex-col justify-center gap-10 w-full text-center text-lg mb-10">
                 {

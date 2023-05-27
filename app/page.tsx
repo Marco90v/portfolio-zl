@@ -3,9 +3,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import cover from "../assets/cover.jpg"
 import { usePathname } from "next/navigation";
+// import { URLBase, JSON, useFetch } from "@/hooks/useFetch";
 
 function Page(){
     const pathname = usePathname();
+    // const [ data ] = useFetch(URLBase+JSON);
+    // console.log(data);
+
     const myLoader = ({ src, width, quality }:any) => {
         return `http://localhost:3000/${src}?w=${width}&q=${ quality || 50 }`;
     };
