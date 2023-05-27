@@ -69,7 +69,7 @@
     @apply h-screen overflow-auto;
   }
   .extraContainerSection{
-    @apply py-8 lg:col-span-5 flex flex-wrap gap-10 justify-center items-center;
+    @apply py-8 lg:col-span-5 flex flex-wrap gap-5 lg:gap-10 justify-center items-center;
   }
 }
 

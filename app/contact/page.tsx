@@ -68,13 +68,14 @@ function Page(){
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
             key={pathname}
-            className="baseContainerSection extraContainerSection bg-gradient-to-br from-black via-pink-950 to-pink-900 from-20% via-80%">
-            <h2 className="lg:absolute top-20 text-white text-4xl font-black" >Contact me</h2>
-            <form onSubmit={handlerSubmit} className="p-2 w-[40rem] y-[25rem] grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
+            className="baseContainerSection extraContainerSection flex-col bg-gradient-to-br from-black via-pink-950 to-pink-900 from-20% via-80%"
+        >
+            <h2 className="text-white text-4xl font-black" >Contact me</h2>
+            <form onSubmit={handlerSubmit} className="p-2 w-full max-w-[40rem] min-w-[20rem] min-h-[26rem] lg:w-[40rem] grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
                 <input disabled={disabled} onChange={handlerInput} value={formContact.fullName} required name="fullName" id="fullName" type="text" placeholder="Full Name" className="baseInputsContact" />
                 <input disabled={disabled} onChange={handlerInput} value={formContact.email} required name="email" id="email" type="email" placeholder="Email" className="baseInputsContact" />
                 <input disabled={disabled} onChange={handlerInput} value={formContact.subject} required name="subject" id="subject" type="text" placeholder="Subject" className="lg:col-span-2 baseInputsContact" />
-                <textarea disabled={disabled} onChange={handlerInput} value={formContact.message} required name="message" id="message" cols={30} rows={10} placeholder="Message" className="lg:col-span-2 baseInputsContact" />
+                <textarea disabled={disabled} onChange={handlerInput} value={formContact.message} required name="message" id="message" cols={30} rows={7} placeholder="Message" className="lg:col-span-2 baseInputsContact" />
                 <span className={`lg:col-span-2 p-2 rounded-lg text-white font-black flex gap gap-x-4 items-center transition-[opacity] ${styleAlert}`} >
                     <Image 
                         src={ alert.icon }
@@ -82,7 +83,7 @@ function Page(){
                     />
                     {alert.msg}
                 </span>
-                <button disabled={disabled} type="submit" className="lg:col-start-2 lg:ml-[8rem] bg-pink-600 rounded-lg font-black sendButtom transition-[background, shadow] duration-500 hover:bg-pink-400 hover:shadow-md hover:shadow-black disabled:bg-gray-700" >
+                <button disabled={disabled} type="submit" className="lg:col-start-2 lg:ml-[8rem] bg-pink-600 rounded-lg font-black sendButtom transition-[box-shadow, background] duration-500 hover:bg-pink-400 hover:shadow-md hover:shadow-black disabled:bg-gray-700" >
                     Send Message
                     <Image
                         src={iconSend}
